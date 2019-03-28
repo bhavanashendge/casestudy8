@@ -1,4 +1,4 @@
-class newmodule::installdocker {
+class casestudy8::installdocker {
 
 package { 'curl':
     ensure => 'installed',
