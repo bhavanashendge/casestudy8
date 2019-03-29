@@ -11,8 +11,6 @@ class casestudy8::installdocker {
 
   exec {
     'add_docker_repo': command => '/usr/bin/add-apt-repository "deb [arch=amd64]
-    https: //download.docker.com/linux/ubuntu $(lsb_release -cs) stable"',
-      require => Exec['apt-update']
+    https: //download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
   }
-
 }
