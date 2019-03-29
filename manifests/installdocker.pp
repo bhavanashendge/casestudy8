@@ -2,7 +2,7 @@ class casestudy8::installdocker {
 
   package {
     'curl': ensure => 'installed',
-    before => Exec['download docker']
+    before => Exec['Add docker gpg key']
   }
 
   exec { 'Add docker gpg key':
