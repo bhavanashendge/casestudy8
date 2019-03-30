@@ -1,3 +1,7 @@
+/*
+* Class to build docker image
+*/
+
 class casestudy8::build {
 
 #Create a manifest to add and build a docker file to create a docker image
