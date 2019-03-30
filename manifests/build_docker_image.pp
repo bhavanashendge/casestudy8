@@ -7,7 +7,15 @@ class casestudy8::build_docker_image{
         mode => '0777'
   }
 
+  file {'/home/edureka/Downloads/build_repo/addressbook.war':
+      mode => '0777',
+      source => "puppet://modules/casestudy8/addressbook.war"
 
+  }
+  file {'/home/edureka/Downloads/build_repo/dockerfile':
+      mode => '0777',
+      source => "puppet://modules/casestudy8/dockerfile"
 
+  }
 
 }
