@@ -10,6 +10,7 @@ class casestudy8::installdocker {
     location => 'https://download.docker.com/linux/ubuntu',
     release  => 'stable',
     repos    => '$(lsb_release -cs)',
+    architecture => 'amd64',
     pin      => '-10',
     key      => {
       'id'     => 'A1BD8E9D78F7FE5C3E65D8AF8B48AD6246925553',
