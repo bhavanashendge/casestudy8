@@ -9,7 +9,7 @@ class casestudy8::install {
   }
 
   exec { 'Add docker to APT repo':
-       command => '/usr/bin/add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
+    command => '/usr/bin/add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
   }
 
   exec { 'Apt get update':
