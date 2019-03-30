@@ -9,12 +9,12 @@ class casestudy8::build_docker_image{
 
   file {'/home/edureka/Downloads/build_repo/addressbook.war':
       mode => '0777',
-      source => "puppet://modules/casestudy8/addressbook.war"
+      source => "puppet:///modules/casestudy8/addressbook.war"
 
   }
-  file {'/home/edureka/Downloads/build_repo/dockerfile':
+  file {'/home/edureka/Downloads/build_repo/Dockerfile':
       mode => '0777',
-      source => "puppet://modules/casestudy8/dockerfile"
+      source => "puppet:///modules/casestudy8/Dockerfile"
 
   }
 
