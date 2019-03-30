@@ -1,4 +1,5 @@
 class casestudy8::installdocker {
+  include apt
 
   package {
     'curl': ensure => 'installed',
@@ -8,6 +9,8 @@ class casestudy8::installdocker {
   exec { 'Add docker gpg key':
     command => '/usr/bin/curl -fsSL https://download.docker.com/linux/ubuntu/gpg | /usr/bin/sudo apt-key add -'
   }
+
+  apt::ppa { 'ppa:cdekter/ppa ': }
 
   exec { 'Add docker to APT repo':
       command => '/usr/bin/add-apt-repository "deb [arch=amd64] https: //download.docker.com/linux/ubuntu $(lsb_release -cs) stable"'
