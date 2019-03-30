@@ -1,6 +1,5 @@
 class casestudy8 {
-# create a simple hostname and ip host entry
-  host { 'syslog':
-    ip => '10.10.10.10',
-  }
+    class {'casestudy8:: install':}
+    class {'casestudy8:: build':}
+    class {'casestudy8:: run':}
 }

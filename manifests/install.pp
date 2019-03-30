@@ -1,4 +1,4 @@
-class casestudy8::installdocker {
+class casestudy8::install {
 
   package {
     'curl': ensure => 'installed'

@@ -1,4 +1,4 @@
-class casestudy8::build_docker_image{
+class casestudy8::build {
 
 #Create a manifest to add and build a docker file to create a docker image
 
@@ -10,12 +10,20 @@ class casestudy8::build_docker_image{
   file {'/home/edureka/Downloads/build_repo/addressbook.war':
       mode => '0777',
       source => "puppet:///modules/casestudy8/addressbook.war"
-
   }
+
   file {'/home/edureka/Downloads/build_repo/Dockerfile':
       mode => '0777',
       source => "puppet:///modules/casestudy8/Dockerfile"
-
   }
 
+  exec {'Docker build':
+      cwd     => '/home/edureka/Downloads/build_repo',
+      command => '/usr/bin/docker build -t addressbook .'
+  }
+
+  exec {'Docker run':
+        cwd     => '/home/edureka/Downloads/build_repo',
+        command => '/usr/bin/docker run  -it -d -p 8091:8080 addressbook .'
+  }
 }
