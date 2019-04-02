@@ -1,5 +1,4 @@
 ## Case study step 1 - Create a manifest to install docker on agent servers
-
 class casestudy8::install {
 
   # Check if curl is avaialble, if not install
